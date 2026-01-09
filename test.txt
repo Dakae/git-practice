@@ -1,3 +1,45 @@
-hello git
-i am dakae
-버전 2를 위한 something
+git 명령어
+
+// 초기 설정
+git config --global user.name "내이름"
+git config --global user.email "이메일"
+
+// git 시작 (프로젝트 폴더 지정)
+git init
+
+// git 레포지토리 연결 
+    // origin 이라는 별명에 링크를 할당함
+    git remote add origin 링크
+
+    // 내 작업공간(branch)의 이름을 main으로 변경(-M 강제 변경)
+    git branch -M main
+    
+    // origin main 으로 연결 고정(-u), 이후 git push만 해도 됨
+    git push -u origin main
+
+// 파일 현재 상태 확인
+git status
+
+// 모든 파일(또는 지정한 피일)을 커밋 대기상태로
+git add . (or 파일명)
+
+// 지정 파일을 커밋 대기상태에서 제외
+git restore --staged 파일명
+
+// .gitignore 라는 파일을 만들어서 무시할 파일명을 지정할수 있다.
+// 이걸 통해 대형 라이브러리 파일 같은것을 자동으로 제외
+
+// 커밋 (발사 준비!)
+git commit -m "메모"
+
+// 커밋 기록 조회
+git log --oneline
+
+// 모든 파일(또는 지정한 피일)을 최근 커밋으로 되돌리기
+git restore . (or 파일명)
+
+// 이전 커밋 제거하고 지정 커밋 시점으로 작업 되돌리기
+git reset --hard 커밋아이디
+
+// github에 발사!
+git push
