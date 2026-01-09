@@ -32,6 +32,9 @@ git restore --staged 파일명
 // 커밋 (발사 준비!)
 git commit -m "메모"
 
+    //수정 내용 한방에 저장
+    git commit -am "수정 내용 한방에 저장"
+
 // 커밋 기록 조회
 git log --oneline
 
